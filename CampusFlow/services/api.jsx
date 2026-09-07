@@ -1,4 +1,4 @@
-export const API_URL = "http://192.168.1.137:5000/api";
+export const API_URL = "https://campusflow-backend-6rrl.onrender.com/api";
 
 // Helper for authorized headers
 const authHeader = (token) => ({
