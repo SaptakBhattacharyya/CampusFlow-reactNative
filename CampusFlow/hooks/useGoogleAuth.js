@@ -63,7 +63,10 @@ export const useGoogleAuth = () => {
         } catch (_) {}
       }
 
-      const redirectUrl = AuthSession.makeRedirectUri();
+      const redirectUrl = AuthSession.makeRedirectUri({
+        scheme: "campusflow",
+        path: "/sso-callback",
+      });
       console.log("OAuth Redirect URL:", redirectUrl);
 
       const { createdSessionId, setActive, signIn, signUp, authSessionResult } = await startSSOFlow({
